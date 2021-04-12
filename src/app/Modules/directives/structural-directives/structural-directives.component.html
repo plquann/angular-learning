@@ -1,0 +1,70 @@
+<p class="text-2xl mt-4">structural-directives works!</p>
+
+<p class="text-2xl font-bold">ngIf</p>
+<p class="text-xl text-red-400" *ngIf="isActive">Hi Angular!</p>
+<button class="px-4 py-1 bg-pink-400 rounded-lg" (click)="isActive = !isActive">
+  Toogle
+</button>
+
+<div *ngIf="isLoggedIn; else loginTemplate">
+  <p>Welcome Quan</p>
+  <button class="px-4 p-2 bg-green-500" (click)="isLoggedIn = false">
+    Logout
+  </button>
+</div>
+
+<!-- <div *ngIf="!isLoggedIn">
+  <p>Please login</p>
+  <button class="px-4 p-2 bg-green-500" (click)="isLoggedIn = true">
+    Login
+  </button>
+</div> -->
+
+<ng-template #loginTemplate>
+  <div>
+    <p>Please login</p>
+    <button class="px-4 p-2 bg-green-500" (click)="isLoggedIn = true">
+      Login
+    </button>
+  </div>
+</ng-template>
+
+<p class="text-2xl font-bold">ngSwitch</p>
+<span [ngSwitch]="color">
+  <p class="w-40 p-5 bg-green-500" *ngSwitchCase="'green'">{{ color }}</p>
+  <p class="w-40 p-5 bg-red-500" *ngSwitchCase="'red'">{{ color }}</p>
+  <p class="w-40 p-5 bg-blue-500" *ngSwitchCase="'blue'">{{ color }}</p>
+  <p class="w-40 p-5 bg-yellow-500" *ngSwitchCase="'yellow'">{{ color }}</p>
+  <p class="w-40 p-5 bg-purple-500" *ngSwitchCase="'purple'">{{ color }}</p>
+  <p class="w-40 p-5 bg-gray-500" *ngSwitchCase="'gray'">{{ color }}</p>
+</span>
+
+<select [value]="color" (change)="changeColor($event)">
+  <option value="green">green</option>
+  <option value="red">red</option>
+  <option value="blue">blue</option>
+  <option value="yellow">yellow</option>
+  <option value="purple">purple</option>
+  <option value="gray">gray</option>
+</select>
+
+<p class="text-2xl font-bold mt-4">ngSwitch</p>
+<p *ngFor="let student of students; let idx = index; count as total">
+  {{ idx + 1 }}/{{ total }} - Name: {{ student.name }} - Age: {{ student.age }}
+</p>
+
+<ng-container *ngIf="students">
+  <p *ngFor="let student of students">
+    Name: {{ student.name }} - Age: {{ student.age }}
+  </p>
+</ng-container>
+
+<ng-template #templateErrors>
+  <div class="px-20 py-4 my-2 bg-red-600 text-center">
+    <span>Something is going on wrong</span>
+  </div>
+</ng-template>
+
+<ng-container *ngTemplateOutlet="templateErrors"></ng-container>
+<ng-container *ngTemplateOutlet="templateErrors"></ng-container>
+<ng-container *ngTemplateOutlet="templateErrors"></ng-container>

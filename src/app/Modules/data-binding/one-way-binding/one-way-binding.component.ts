@@ -7,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OneWayBindingComponent implements OnInit {
 
-  name:string = 'cyber soft';
+  name:string = 'cyber-soft';
+  srcImg:string = 'https://picsum.photos/200/200';
 
 
-  constructor() { }
+  constructor() { };
+
+  changeName = () => {
+    this.name = 'Changed!';
+  }
+
+  showName = () => {
+    
+  }
 
   ngOnInit(): void {
   }

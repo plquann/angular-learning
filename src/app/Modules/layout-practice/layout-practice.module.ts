@@ -12,13 +12,15 @@ import { SlideBarComponent } from 'src/app/layout-practice/slide-bar/slide-bar.c
     HeaderComponent,
     ContentComponent,
     SlideBarComponent,
-    FooterComponent
+    FooterComponent,
   ],
-  imports: [
-    CommonModule
+  imports: [CommonModule],
+  exports: [
+    LayoutPracticeComponent,
+    HeaderComponent,
+    ContentComponent,
+    SlideBarComponent,
+    FooterComponent,
   ],
-  exports:[
-    LayoutPracticeModule
-  ]
 })
-export class LayoutPracticeModule { }
+export class LayoutPracticeModule {}

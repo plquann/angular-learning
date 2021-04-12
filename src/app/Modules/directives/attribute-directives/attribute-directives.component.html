@@ -1,0 +1,28 @@
+<p class="text-3xl mb-5 font-bold">attribute-directives works!</p>
+
+<p class="text-3xl mb-5 font-bold">ngClass</p>
+<p
+  class="text-center"
+  [class]="{ 'bg-green-500': isActive, 'bg-red-500': !isActive }"
+>
+  Hi Angular ngClass!
+</p>
+
+<button class="px-10 py-2" (click)="isActive = !isActive">Toggle</button>
+
+<p class="text-3xl mb-5 font-bold">ngStyle</p>
+<p
+  style="text-align: center"
+  [style]="{
+    'background-color': color
+  }"
+>
+  Hi Angular ngStyle!
+</p>
+
+<div
+  style="height: 200px"
+  [style]="{ 'background-image': 'url(' + imgSrc + ')' }"
+></div>
+
+<div [innerHtml]="html"></div>

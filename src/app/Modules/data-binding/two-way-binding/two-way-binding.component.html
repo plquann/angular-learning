@@ -1,0 +1,13 @@
+<p>two-way-binding works!</p>
+<p>{{ userName }}</p>
+<input [value]="userName" (input)="changeUserName($event)" />
+<!-- Two way binding: import formsModel-->
+<p>{{ email }}</p>
+<input class="border border-solid border-black p-2" [(ngModel)]="email" />
+<br />
+<p>{{ color }}</p>
+<select class="border border-solid border-black mt-4 p-2" [(ngModel)]="color">
+  <option value="red">Red</option>
+  <option value="blue">Blue</option>
+  <option value="yellow">Yellow</option>
+</select>
