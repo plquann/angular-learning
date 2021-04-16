@@ -1,0 +1,9 @@
+<div class="card text-left">
+  <img class="card-img-top" [src]="movie.image" alt="" />
+  <div class="card-body">
+    <h4 class="card-title text-2xl font-semibold">{{ movie.name }}</h4>
+    <p class="card-text ">{{ movie.desc }}</p>
+    <button class="btn btn-success mt-2" (click)="selectMovie()">See more</button>
+    <button class="btn btn-danger mt-2" (click)="deleteMovie()">Delete</button>
+  </div>
+</div>

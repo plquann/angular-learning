@@ -1,0 +1,17 @@
+<div class="card text-left mt-3">
+  <div class="card-img-top"></div>
+  <div class="card-body">
+    <h4 class="card-title">Add Movie</h4>
+    <div class="card-text">
+      <div class="form-group">
+        <label for="">Name</label>
+        <input type="text" class="form-control" [(ngModel)]="form.name" />
+        <label for="">Desc</label>
+        <input type="text" class="form-control" [(ngModel)]="form.desc" />
+        <label for="">Image</label>
+        <input type="text" class="form-control" [(ngModel)]="form.image" />
+        <button class="btn btn-primary" (click)="(handleAddMovie())">Add</button>
+      </div>
+    </div>
+  </div>
+</div>

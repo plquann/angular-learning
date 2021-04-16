@@ -1,0 +1,16 @@
+<div class="grid grid-cols-3 gap-4">
+  <div *ngFor="let movie of movies">
+    <app-movie-item
+      [movie]="movie"
+      (onSelect)="selectMovie($event)"
+    ></app-movie-item>
+  </div>
+</div>
+
+<div *ngIf="selectedMovie" class="grid grid-cols-2 gap-2 text-center">
+  <img [src]="selectedMovie.image" />
+  <div>
+    <h1 class="text-3xl font-bold mb-3">{{ selectedMovie.name }}</h1>
+    <p>{{ selectedMovie.desc }}</p>
+  </div>
+</div>

@@ -5,7 +5,9 @@ import { AppComponent } from './app.component';
 import { DemoComponent } from './demo/demo.component';
 import { DataBindingModule } from './Modules/data-binding/data-binding.module';
 import { DirectivesModule } from './Modules/directives/directives.module';
+import { InteractionModule } from './Modules/interaction/interaction.module';
 import { LayoutPracticeModule } from './Modules/layout-practice/layout-practice.module';
+import { ProductManagementModule } from './Modules/product-management/product-management.module';
 
 @NgModule({
   declarations: [AppComponent, DemoComponent],
@@ -14,8 +16,10 @@ import { LayoutPracticeModule } from './Modules/layout-practice/layout-practice.
     LayoutPracticeModule,
     DataBindingModule,
     DirectivesModule,
+    ProductManagementModule,
+    InteractionModule,
   ],
   providers: [],
-  bootstrap: [AppComponent, DemoComponent],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
